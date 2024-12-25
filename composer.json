@@ -1,0 +1,32 @@
+{
+    "name": "ecxod/flags",
+    "description": "Some flags to use with i18n",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Christian Eichert",
+            "email": "c@zp1.net"
+        }
+    ],
+    "extra": {
+        "installer-paths": {
+            "public/static/pic/": ["ecxod/flags"]
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "mkdir -p public/assets/images",
+            "[ -L public/assets/images/flags ] && rm public/assets/images/flags || true",
+            "ln -s ../../vendor/ecxod/flags public/assets/images/flags"
+        ],
+        "post-update-cmd": [
+            "mkdir -p public/assets/images",
+            "[ -L public/assets/images/flags ] && rm public/assets/images/flags || true",
+            "ln -s ../../vendor/ecxod/flags public/assets/images/flags"
+        ]
+    }
+    ,
+    "minimum-stability": "stable",
+    "require": {}
+}
