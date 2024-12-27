@@ -9,11 +9,6 @@
             "email": "c@zp1.net"
         }
     ],
-    "extra": {
-        "installer-paths": {
-            "public/static/pic/": ["ecxod/flags"]
-        }
-    },
     "scripts": {
         "post-install-cmd": [
             "mkdir -p public/assets/images",
